@@ -24,7 +24,7 @@ public static void writeHashMaps(ArrayList<HashMap<String, HashMapValue>> data, 
 - The second method will write HashMap's with `String` keys and `HashMapValue` values. This is if you want to write more complicated JSON objects, which involve lists.
 - For example, doing  
 ```java
-ArrayList<HashMap> list = new ArrayList<>();
+ArrayList<HashMap<String, String>> list = new ArrayList<>();
 HashMap<String, String> map = new HashMap<>();
 map.put("name", "jeff");
 list.add(map);
