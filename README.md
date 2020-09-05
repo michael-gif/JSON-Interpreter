@@ -28,7 +28,7 @@ ArrayList<HashMap<String, String>> list = new ArrayList<>();
 HashMap<String, String> map = new HashMap<>();
 map.put("name", "jeff");
 list.add(map);
-Writer.write(list, "json.txt");
+Writer.writeString(list, "json.txt");
 ```
 will write `{"name":"jeff"}` to the next line of `json.txt`.
 - Another example,
