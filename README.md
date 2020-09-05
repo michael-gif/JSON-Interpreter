@@ -20,7 +20,7 @@ public static ArrayList<HashMap<String, HashMapValue>> read(String filename) {}
 public static void writeString(ArrayList<HashMap<String, String>> data, String filename) {}
 public static void writeHashMaps(ArrayList<HashMap<String, HashMapValue>> data, String filename, boolean append) {}
 ```
-- The first method will write HashMap's with `String` keys and values. This is useful if you want to write some simple JSON objects.
+- The first method will write HashMap's with `String` keys and values. This is useful if you want to write some simple JSON objects, such as `{"name":"bob"}`.
 - The second method will write HashMap's with `String` keys and `HashMapValue` values. This is if you want to write more complicated JSON objects, which involve lists.
 - For example, doing  
 ```java
