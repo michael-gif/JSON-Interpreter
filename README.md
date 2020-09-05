@@ -18,10 +18,10 @@ public static ArrayList<HashMap<String, HashMapValue>> read(String filename) {}
 - To write JSON, there are two availabe methods in `Writer.java`.  
 ```java
 public static void writeString(ArrayList<HashMap<String, String>> data, String filename) {}
-public static void writeHashMaps(ArrayList<HashMap<String, HashMapValue>> data, String filename, boolean append) {}
+public static void writeCompound(ArrayList<HashMap<String, HashMapValue>> data, String filename, boolean append) {}
 ```
 - The first method will write HashMap's with `String` keys and values. This is useful if you want to write simple JSON objects, such as `{"name":"bob"}`.
-- The second method will write HashMap's with `String` keys and `HashMapValue` values. This is if you want to write more complicated JSON objects, which involve lists.
+- The second method will write HashMap's with `String` keys and `HashMapValue` values. This is if you want to write more complicated JSON objects, which involve lists. Set `boolean append` to `true` if you want to append to the file, or `false` if you want to overwrite the file.
 - For example, doing  
 ```java
 ArrayList<HashMap<String, String>> list = new ArrayList<>();
@@ -47,7 +47,7 @@ map.put("name",new HashMapValue("hello"));
 map.put("value",new HashMapValue(nestedList));
 list.add(map);
 
-Writer.writeHashMaps(list, "json.txt", true);
+Writer.writeCompound(list, "json.txt", true);
 ```
 This would write  
 `{"name":"hello","index":"0","value":[{"name":"goodbye","index":"0","value":"yes"}]},`
