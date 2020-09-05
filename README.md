@@ -13,7 +13,7 @@ This java package will allow you to read json.
 ```java
 public static ArrayList<HashMap<String, HashMapValue>> read(String filename) {}
 ```
-- For example, doing `Reader.read("json.txt");` will return an `ArrayList<HashMap<String, HashMapValue>>`, which contains the JSON objects.
+- For example, doing `Reader.read("json.txt");` will return an `ArrayList<HashMap<String, HashMapValue>>`, which contains the JSON objects in the form of `HashMap`'s.
 ### Writing
 - To write JSON, there are two availabe methods in `Writer.java`.  
 ```java
