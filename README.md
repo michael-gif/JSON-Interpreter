@@ -21,7 +21,7 @@ public static void writeString(ArrayList<HashMap<String, String>> data, String f
 public static void writeCompound(ArrayList<HashMap<String, HashMapValue>> data, String filename, boolean append) {}
 ```
 - The first method will write HashMap's with `String` keys and values. This is useful if you want to write simple JSON objects, such as `{"name":"bob"}`.
-- The second method will write HashMap's with `String` keys and `HashMapValue` values. This is if you want to write more complicated JSON objects, which involve lists. Set `boolean append` to `true` if you want to append to the file, or `false` if you want to overwrite the file.
+- The second method will write HashMap's with `String` keys and `HashMapValue` values. This is if you want to write more complicated JSON objects, which involve lists. Set `boolean append` to `true` if you want to append to the file, or `false` if you want to overwrite the file. The default value is `true`.
 - For example, doing  
 ```java
 ArrayList<HashMap<String, String>> list = new ArrayList<>();
