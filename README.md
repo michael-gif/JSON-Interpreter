@@ -9,13 +9,13 @@ This java package will allow you to read json.
 
 ## Usage
 ### Reading
-- To read JSON, there is one availabe method in `Reader.java`
+- To read JSON, there is one availabe method in `Interpreter.java`
 ```java
 public static ArrayList<HashMap<String, HashMapValue>> read(String filename) {}
 ```
-- For example, doing `Reader.read("json.txt");` will return an `ArrayList<HashMap<String, HashMapValue>>`, which contains the JSON objects in the form of `HashMap`'s.
+- For example, doing `Interpreter.read("json.txt");` will return an `ArrayList<HashMap<String, HashMapValue>>`, which contains the JSON objects in the form of `HashMap`'s.
 ### Writing
-- To write JSON, there are two availabe methods in `Writer.java`.  
+- To write JSON, there are two availabe methods in `Interpreter.java`.  
 ```java
 public static void writeString(ArrayList<HashMap<String, String>> data, String filename) {}
 public static void writeCompound(ArrayList<HashMap<String, HashMapValue>> data, String filename, boolean append) {}
@@ -28,7 +28,7 @@ ArrayList<HashMap<String, String>> list = new ArrayList<>();
 HashMap<String, String> map = new HashMap<>();
 map.put("name", "jeff");
 list.add(map);
-Writer.writeString(list, "json.txt");
+Interpreter.writeString(list, "json.txt");
 ```
 will write `{"name":"jeff"}` to the next line of `json.txt`.
 - Another example,
@@ -47,7 +47,7 @@ map.put("name",new HashMapValue("hello"));
 map.put("value",new HashMapValue(nestedList));
 list.add(map);
 
-Writer.writeCompound(list, "json.txt", true);
+Interpreter.writeCompound(list, "json.txt", true);
 ```
 This would write  
 `{"name":"hello","index":"0","value":[{"name":"goodbye","index":"0","value":"yes"}]},`
